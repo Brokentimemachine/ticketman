@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<h1> This will show the information of the ticket</h1>
+
+<table>
+	<tr> 
+		<th>Name</th>
+		<th>Summary</th>
+		<th>Status</th>
+	</tr>
+
+	<tr>	
+		<td><%= @ticket.summary %></td>
+	</tr>
+</table>
+
+<%= link_to 'Edit', edit_ticket_path(@ticket) %> 
+<%= link_to 'Back', tickets_path %>

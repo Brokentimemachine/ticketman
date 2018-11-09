@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tickets</h1>
+<style>
+  table, th, td {
+    border: 5px solid black;
+    border-collapse: collapse;
+} 
+th, td {
+    padding: 15px;
+}
+table#t01 tr:nth-child(even) {
+    background-color: #b4b4b4;
+}
+table#t01 tr:nth-child(odd) {
+    background-color: #fff;
+}
+table#t01 th {
+    color: white;
+    background-color: #337DFF;
+}
+</style>
+<table id = "t01">
+  <thead>
+    <tr>
+      <th> Name </th>
+      <th> Status </th>
+      <th> Details </th>
+      <th colspan="15"> Options </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tickets.each do |ticket| %>
+      <tr>
+        <td size = 40><%= ticket.name %></td>
+        <td ><%= ticket.status %></td>
+        <td ><%= "Click Show For More Details" %></td>
+        <td><%= link_to 'Show', ticket %></td>
+        <td><%= link_to 'Edit', edit_ticket_path(ticket) %></td>
+        <td><%= link_to 'Destroy', ticket, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ticket', new_ticket_path %>
