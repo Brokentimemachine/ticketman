@@ -1,7 +1,10 @@
+<input class="form-control form-control-lg" type="text" placeholder="Enter Name">
 <%= form_with(model: ticket, local: true) do |form| %>
   <%= form.text_field :name %>
   <%= form.text_field :summary %>
   <%= form.text_field :status %>
+  <%= form.text_field :department %>
+
   <% if ticket.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(ticket.errors.count, "error") %> prohibited this ticket from being saved:</h2>

@@ -1,32 +1,14 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Tickets</h1>
-<style>
-  table, th, td {
-    border: 5px solid black;
-    border-collapse: collapse;
-} 
-th, td {
-    padding: 15px;
-}
-table#t01 tr:nth-child(even) {
-    background-color: #b4b4b4;
-}
-table#t01 tr:nth-child(odd) {
-    background-color: #fff;
-}
-table#t01 th {
-    color: white;
-    background-color: #337DFF;
-}
-</style>
-<table id = "t01">
-  <thead>
+
+<table class="table">
+  <thead class="thead-dark">
     <tr>
-      <th> Name </th>
-      <th> Status </th>
-      <th> Details </th>
-      <th colspan="15"> Options </th>
+      <th scope="col">Name</th>
+      <th scope="col">Status</th>
+      <th scope="col">Details</th>
+      <th scope="col">Options</th>
     </tr>
   </thead>
 
@@ -35,10 +17,12 @@ table#t01 th {
       <tr>
         <td size = 40><%= ticket.name %></td>
         <td ><%= ticket.status %></td>
-        <td ><%= "Click Show For More Details" %></td>
-        <td><%= link_to 'Show', ticket %></td>
-        <td><%= link_to 'Edit', edit_ticket_path(ticket) %></td>
-        <td><%= link_to 'Destroy', ticket, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td ><%= "Click Show For More Details" %> </td>
+        <td>
+          <%= link_to 'Show', ticket %>
+          <%= link_to 'Edit', edit_ticket_path(ticket) %>
+          <%= link_to 'Destroy', ticket, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
       </tr>
     <% end %>
   </tbody>
