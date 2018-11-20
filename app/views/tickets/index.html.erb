@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Tickets</h1>
+<h1 class="display-3">All Tickets</h1>
 
 <table class="table">
   <thead class="thead-dark">
@@ -21,21 +21,28 @@
         <td ><%= ticket.department %></td>
         <td><%= "Click Show For More Details" %></td>
         <td>
-          <%= link_to 'Show', ticket %>
-          <%= link_to 'Edit', edit_ticket_path(ticket) %>
-          <%= link_to 'Destroy', ticket, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <div class="btn btn-primary" >
+            <%= link_to 'Show', ticket, :class => "btn btn-primary" %>
+          </div>
+          <div class="btn btn-primary" >
+            <%= link_to 'Edit', edit_ticket_path(ticket), :class => "btn btn-primary" %>
+          </div>
+          <div class="btn btn-primary" >
+          <%= link_to 'Destroy', ticket, :class => "btn btn-primary", method: :delete, data: { confirm: 'Are you sure?' } %>
+          </div>
         </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<nav class="navbar navbar-light bg-light">
-  <form class="form-inline">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-  </form>
-</nav>
+
+<!--<nav class="navbar navbar-light bg-light">-->
+<!--  <form class="form-inline">-->
+<!--    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
+<!--    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
+<!--  </form>-->
+<!--</nav>-->
 
 
 <br>

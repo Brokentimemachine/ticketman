@@ -2,14 +2,14 @@
   <%= form_for(ticket) do |f| %>
     <div class="form-group">
       <%= f.label :Name %><br>
-      <%= f.text_field :name, class: 'form-control' %><br>
+      <%= f.text_field :name, class: 'form-control', placeholder: "Enter Issue Title Here", :required=>true %><br>
       <%= f.label :Summary %><br>
-      <%= f.text_field :summary, class: 'form-control' %><br>
+      <%= f.text_field :summary, class: 'form-control',  placeholder: "Enter Issue Summary Here", :required=>true %><br>
       <%= f.label :Department %>
-      <%= f.text_field :department, class: 'form-control' %>
+      <%= f.text_field :department, class: 'form-control',  placeholder: "Enter Your Department Name (If not applicable Enter N/A)", :required=>true %>
       <%= f.label :Status %>
-      <%= f.text_field :status, class: "form-control"%>
+      <%= f.text_field :status, class: "form-control",  placeholder: "Select Open or Closed From Drop Down Menu", :required=>true%>
       <br>
-      <%= f.submit 'Save ticket', class: 'btn btn-primary' %>
+      <%= f.submit 'Save ticket', :onclick => "return confirm('Issue Submitted!')" ,class: 'btn btn-primary' %>
     </div>
   <% end %>
