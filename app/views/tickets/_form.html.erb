@@ -8,8 +8,11 @@
       <%= f.label :Department %>
       <%= f.text_field :department, class: 'form-control',  placeholder: "Enter Your Department Name (If not applicable Enter N/A)", :required=>true %>
       <%= f.label :Status %>
-      <%= f.text_field :status, class: "form-control",  placeholder: "Select Open or Closed From Drop Down Menu", :required=>true%>
+<!--      <select class="form-control form-control-sm">-->
+<!--        <option>Default select</option>-->
+      <%= f.select :status, Open:"Open", Closed:"Closed"%>
+
       <br>
-      <%= f.submit 'Save ticket', :onclick => "return confirm('Issue Submitted!')" ,class: 'btn btn-primary' %>
+        <%= f.submit 'Save ticket', :onclick => "return confirm('Issue Submitted!')" ,class: 'btn btn-primary' %>
     </div>
   <% end %>

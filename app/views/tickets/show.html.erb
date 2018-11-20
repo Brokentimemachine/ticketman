@@ -13,6 +13,8 @@
       <th scope="col">Summary</th>
       <th scope="col">Status</th>
       <th scope="col">Department</th>
+      <th scope="col">Time Created</th>
+      <th scope="col">Ticket ID Number</th>
     </tr>
     </thead>
 	<tr>	
@@ -20,6 +22,8 @@
 		<td><%= @ticket.summary %></td>
 		<td><%= @ticket.status %></td>
     <td><%= @ticket.department %></td>
+    <td><%= @ticket.created_at %></td>
+    <td><%= @ticket.id %></td></d>
 	</tr>
 </table>
 
