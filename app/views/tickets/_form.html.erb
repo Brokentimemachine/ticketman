@@ -1,23 +1,15 @@
-<input class="form-control form-control-lg" type="text" placeholder="Enter Name">
-<%= form_with(model: ticket, local: true) do |form| %>
-  <%= form.text_field :name %>
-  <%= form.text_field :summary %>
-  <%= form.text_field :status %>
-  <%= form.text_field :department %>
 
-  <% if ticket.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(ticket.errors.count, "error") %> prohibited this ticket from being saved:</h2>
-
-      <ul>
-      <% ticket.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+  <%= form_for(ticket) do |f| %>
+    <div class="form-group">
+      <%= f.label :Name %><br>
+      <%= f.text_field :name, class: 'form-control' %><br>
+      <%= f.label :Summary %><br>
+      <%= f.text_field :summary, class: 'form-control' %><br>
+      <%= f.label :Department %>
+      <%= f.text_field :department, class: 'form-control' %>
+      <%= f.label :Status %>
+      <%= f.text_field :status, class: "form-control"%>
+      <br>
+      <%= f.submit 'Save ticket', class: 'btn btn-primary' %>
     </div>
   <% end %>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>

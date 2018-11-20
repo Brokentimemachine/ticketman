@@ -7,6 +7,7 @@
     <tr>
       <th scope="col">Name</th>
       <th scope="col">Status</th>
+      <th scope="col">Department</th>
       <th scope="col">Details</th>
       <th scope="col">Options</th>
     </tr>
@@ -17,7 +18,8 @@
       <tr>
         <td size = 40><%= ticket.name %></td>
         <td ><%= ticket.status %></td>
-        <td ><%= "Click Show For More Details" %> </td>
+        <td ><%= ticket.department %></td>
+        <td><%= "Click Show For More Details" %></td>
         <td>
           <%= link_to 'Show', ticket %>
           <%= link_to 'Edit', edit_ticket_path(ticket) %>
@@ -28,6 +30,16 @@
   </tbody>
 </table>
 
-<br>
+<nav class="navbar navbar-light bg-light">
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</nav>
 
-<%= link_to 'New Ticket', new_ticket_path %>
+
+<br>
+<div class="btn btn-primary" >
+  <%= link_to 'New Ticket',new_ticket_path(@ticket), :class => "btn btn-primary" %> |
+</div>
+
