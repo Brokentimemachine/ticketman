@@ -10,7 +10,7 @@
       <%= f.label :Status %>
 <!--      <select class="form-control form-control-sm">-->
 <!--        <option>Default select</option>-->
-      <%= f.select :status, Open:"Open", Closed:"Closed"%>
+      <%= f.select :status, Open:"Open", Closed:"Closed", In_Progress:"In Progress" %>
 
       <br>
         <%= f.submit 'Save ticket', :onclick => "return confirm('Issue Submitted!')" ,class: 'btn btn-primary' %>
