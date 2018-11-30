@@ -12,18 +12,25 @@
                                  ['400 Montgomery (Rivera School)','400 Montgomery (Rivera School)'],
                                  ['824 Silvia Street','824 Silvia Street'],
                                  ['1201 West State','1201 West State'],
+<<<<<<< HEAD
                                  ['Other','Other']], { :include_blank => '--- Select Department ---' }, :required => true%>
       <%= f.label :Priority %>
       <%= f.select :status, [['High', 'High'],
                              ['Medium', 'Medium'],
                              ['Low', 'Low']],  { :include_blank => '--- Select Status ---' }, :required => true%>
+=======
+                                 ['Other','Other']], { :include_blank => '--- Select Department ---' }, :required => true%><br>
+>>>>>>> f9dead1aaefb6955c59d9c631362c18993e8c96f
 
       <%= f.label :Status %>
       <%= f.select :status, [['Open', 'Open'],
                              ['Closed', 'Closed'],
-                             ['In Progress', 'In Progress']],  { :include_blank => '--- Select Status ---' }, :required => true%>
-      <br>
-        <%= f.submit 'Save ticket',class: 'btn btn-primary' %>
+                             ['In Progress', 'In Progress']],  { :include_blank => '--- Select Status ---' }, :required => true%><br>
+      <%= f.label :Priority %>
+      <%= f.select :priority, [['High', 'High'],
+                               ['Medium', 'Medium'],
+                               ['Low', 'Low']],  { :include_blank => '--- Select Priority ---' }, :required => true%><br>
+        <%= f.submit 'Save ticket',class: 'btn btn-primary' %><br>
     </div>
 
 
