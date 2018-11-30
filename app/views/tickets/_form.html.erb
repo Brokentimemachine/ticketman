@@ -1,7 +1,7 @@
 
   <%= form_for(ticket) do |f| %>
     <div class="form-group">
-      <%= f.label :Name %><br>
+      <%= f.label :"Issue Title" %><br>
       <%= f.text_field :name, class: 'form-control', placeholder: "Enter Issue Title Here", :required=>true %><br>
       <%= f.label :Summary %><br>
       <%= f.text_field :summary, class: 'form-control',  placeholder: "Enter Issue Summary Here", :required=>true %><br>
@@ -13,6 +13,11 @@
                                  ['824 Silvia Street','824 Silvia Street'],
                                  ['1201 West State','1201 West State'],
                                  ['Other','Other']], { :include_blank => '--- Select Department ---' }, :required => true%>
+      <%= f.label :Priority %>
+      <%= f.select :status, [['High', 'High'],
+                             ['Medium', 'Medium'],
+                             ['Low', 'Low']],  { :include_blank => '--- Select Status ---' }, :required => true%>
+
       <%= f.label :Status %>
       <%= f.select :status, [['Open', 'Open'],
                              ['Closed', 'Closed'],

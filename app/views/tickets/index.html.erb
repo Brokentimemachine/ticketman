@@ -11,6 +11,7 @@
       <th scope="col">Department</th>
       <th scope="col">Summary</th>
       <th scope="col">Status</th>
+      <th scope="col">Priority</th>
       <th scope="col">Options</th>
     </tr>
   </thead>
@@ -20,8 +21,9 @@
       <tr>
         <td><%= truncate ticket.name %></td>
         <td ><%= truncate ticket.department %></td>
-        <td><%= truncate ticket.summary %></td>
+        <td><%= link_to ticket.summary, ticket %></td>
         <td ><%= truncate ticket.status %></td>
+        <td ><%= truncate ticket.priority %> </td>
         <td>
           <div class="btn btn-primary" >
             <%= link_to 'Show', ticket, :class => "btn btn-primary" %>
