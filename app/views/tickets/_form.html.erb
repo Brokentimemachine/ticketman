@@ -1,10 +1,13 @@
 
   <%= form_for(ticket) do |f| %>
     <div class="form-group" style="font-size: larger">
+<!--  User enters issue title-->
       <%= f.label :"Issue Title" %><br>
       <%= f.text_field :name, class: 'form-control', placeholder: "Enter Issue Title Here", :required=>true %><br>
+<!--  User enters issue summary-->
       <%= f.label :Summary %><br>
       <%= f.text_field :summary, class: 'form-control',  placeholder: "Enter Issue Summary Here", :required=>true %><br>
+<!--  User selects Department-->
       <%= f.label :Department %>
       <%= f.select :department, [['7 Dunmoore Avenue','7 Dunmoore Avenue'],
                                  ['151 Mercer Street','151 Mercer Street'],
@@ -12,19 +15,19 @@
                                  ['400 Montgomery (Rivera School)','400 Montgomery (Rivera School)'],
                                  ['824 Silvia Street','824 Silvia Street'],
                                  ['1201 West State','1201 West State'],
-                                 ['Other','Other']], { :include_blank => '--- Select Department ---', :required => true}, {class: "form-control"}%><br>
-
+                                 ['Other','Other']], { :include_blank => '--- Select Department ---', :required => true}, {class: "btn btn-outline-primary"}%><br>
+<!--  User selects priority-->
       <%= f.label :Priority %>
       <%= f.select :priority, [['High', 'High'],
                                ['Medium', 'Medium'],
-                               ['Low', 'Low']],  { :include_blank => '--- Select Status ---', :required => true},{class: "form-control"}%><br>
+                               ['Low', 'Low']],  { :include_blank => '--- Select Status ---', :required => true},{class: "btn btn-outline-primary"}%><br>
 
 
-
+<!--  User selects status-->
       <%= f.label :Status %>
       <%= f.select :status, [['Open', 'Open'],
                              ['Closed', 'Closed'],
-                             ['In Progress', 'In Progress']],  { :include_blank => '--- Select Status ---', :required => true }, {class: "form-control"}%><br>
+                             ['In Progress', 'In Progress']],  { :include_blank => '--- Select Status ---', :required => true }, {class: "btn btn-outline-primary"}%><br>
         <%= f.submit 'Save ticket',class: 'btn btn-primary' %><br>
     </div>
 
