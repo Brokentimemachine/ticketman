@@ -12,18 +12,19 @@
                                  ['400 Montgomery (Rivera School)','400 Montgomery (Rivera School)'],
                                  ['824 Silvia Street','824 Silvia Street'],
                                  ['1201 West State','1201 West State'],
-                                 ['Other','Other']], { :include_blank => '--- Select Department ---' }, :required => true%>
+                                 ['Other','Other']], { :include_blank => '--- Select Department ---', :required => true}, {class: "form-control"}%><br>
+
       <%= f.label :Priority %>
       <%= f.select :priority, [['High', 'High'],
                                ['Medium', 'Medium'],
-                               ['Low', 'Low']],  { :include_blank => '--- Select Status ---' }, :required => true%>
+                               ['Low', 'Low']],  { :include_blank => '--- Select Status ---', :required => true},{class: "form-control"}%><br>
 
 
 
       <%= f.label :Status %>
       <%= f.select :status, [['Open', 'Open'],
                              ['Closed', 'Closed'],
-                             ['In Progress', 'In Progress']],  { :include_blank => '--- Select Status ---' }, :required => true%><br>
+                             ['In Progress', 'In Progress']],  { :include_blank => '--- Select Status ---', :required => true }, {class: "form-control"}%><br>
         <%= f.submit 'Save ticket',class: 'btn btn-primary' %><br>
     </div>
 
