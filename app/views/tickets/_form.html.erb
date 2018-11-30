@@ -6,13 +6,30 @@
       <%= f.label :Summary %><br>
       <%= f.text_field :summary, class: 'form-control',  placeholder: "Enter Issue Summary Here", :required=>true %><br>
       <%= f.label :Department %>
-      <%= f.text_field :department, class: 'form-control',  placeholder: "Enter Your Department Name (If not applicable Enter N/A)", :required=>true %>
+      <%= f.select :department, [['7 Dunmoore Avenue','7 Dunmoore Avenue'],
+                                 ['151 Mercer Street','151 Mercer Street'],
+                                 ['222 North Hermitage','222 North Hermitage'],
+                                 ['400 Montgomery (Rivera School)','400 Montgomery (Rivera School)'],
+                                 ['824 Silvia Street','824 Silvia Street'],
+                                 ['1201 West State','1201 West State'],
+                                 ['Other','Other']], { :include_blank => '--- Select Department ---' }, :required => true%>
       <%= f.label :Status %>
-<!--      <select class="form-control form-control-sm">-->
-<!--        <option>Default select</option>-->
-      <%= f.select :status, Open:"Open", Closed:"Closed", In_Progress:"In Progress" %>
-
+      <%= f.select :status, [['Open', 'Open'],
+                             ['Closed', 'Closed'],
+                             ['In Progress', 'In Progress']],  { :include_blank => '--- Select Status ---' }, :required => true%>
       <br>
-        <%= f.submit 'Save ticket', :onclick => "return confirm('Issue Submitted!')" ,class: 'btn btn-primary' %>
+        <%= f.submit 'Save ticket',class: 'btn btn-primary' %>
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
   <% end %>
