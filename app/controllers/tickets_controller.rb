@@ -4,7 +4,8 @@ class TicketsController < ApplicationController
   # GET /tickets
   # GET /tickets.json
   def index
-    @tickets = Ticket.all
+    @tickets = Ticket.paginate(:page => params[:page], :per_page => 10)
+    #@tickets = Ticket.all
   end
 
   # GET /tickets/1

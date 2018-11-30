@@ -3,7 +3,6 @@
 <h1 class="display-3">All Tickets</h1>
 
 <!--Adds scrolling functionality-->
-<div class="table-wrapper-scroll-y">
 
 <table class="table">
   <thead class="thead-dark">
@@ -17,7 +16,7 @@
   </thead>
 
   <tbody>
-    <% @tickets.each do |ticket| %>
+  <% @tickets.each do |ticket| %>
       <tr>
         <td><%= truncate ticket.name %></td>
         <td ><%= truncate ticket.department %></td>
@@ -51,6 +50,13 @@
 
 
 <br>
+<div class="digg_pagination">
+  <div class="page_info">
+    <%= page_entries_info @posts %>
+  </div>
+  <%= will_paginate @posts, :container => false %>
+</div>
+
 <div class="btn btn-primary" >
   <%= link_to 'New Ticket',new_ticket_path(@ticket), :class => "btn btn-primary" %> |
 </div>
