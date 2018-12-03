@@ -24,12 +24,12 @@ Last modified on: 12/03/2018
       <th scope="col">Ticket ID Number</th>
     </tr>
     </thead>
-	<tr>	
+	<tr>
 		<td><%= @ticket.name %></td>
 		<td><%= @ticket.summary %></td>
 		<td><%= @ticket.status %></td>
     <td><%= @ticket.department %></td>
-    <td><%= @ticket.created_at %></td>
+    <td><%= @ticket.created_at.in_time_zone('Eastern Time (US & Canada)').strftime("%Y-%m-%d at %l:%M %p") %></td>
     <td><%= @ticket.id %></td></d>
 	</tr>
 </table>
