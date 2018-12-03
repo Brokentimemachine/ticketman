@@ -24,6 +24,7 @@ Last modified on: 12/03/2018
       <th scope="col">Name</th>
       <th scope="col">Department</th>
       <th scope="col">Summary</th>
+      <th scope="col">Latest Update</th>
       <th scope="col">Status</th>
       <th scope="col">Priority</th>
       <th scope="col">Options</th>
@@ -33,9 +34,15 @@ Last modified on: 12/03/2018
   <tbody>
   <% @tickets.each do |ticket| %>
       <tr>
-        <td><%= truncate ticket.name %></td>
+        <td><%=  truncate ticket.name %></td>
         <td ><%= truncate ticket.department %></td>
-        <td><%=  truncate ticket.summary %></td>
+        <td><%=  truncate(ticket.summary) %></td>
+        <td><%=
+          if ticket.updateSummary != nil
+          link_to truncate(ticket.updateSummary, :length => 30), ticket
+          end
+        %></td>
+<!--        <td><%#=  truncate ticket.updateSummary%></td>-->
         <td ><%= truncate ticket.status %></td>
         <td ><%= truncate ticket.priority %> </td>
         <td>

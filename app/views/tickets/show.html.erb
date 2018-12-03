@@ -18,6 +18,7 @@ Last modified on: 12/03/2018
     <tr>
       <th scope="col">Name</th>
       <th scope="col">Summary</th>
+      <th scope="col">Latest Update from Dave</th>
       <th scope="col">Status</th>
       <th scope="col">Department</th>
       <th scope="col">Time Created</th>
@@ -27,6 +28,7 @@ Last modified on: 12/03/2018
 	<tr>
 		<td><%= @ticket.name %></td>
 		<td><%= @ticket.summary %></td>
+    <td><%= @ticket.updateSummary%></td>
 		<td><%= @ticket.status %></td>
     <td><%= @ticket.department %></td>
     <td><%= @ticket.created_at.in_time_zone('Eastern Time (US & Canada)').strftime("%Y-%m-%d at %l:%M %p") %></td>

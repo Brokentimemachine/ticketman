@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_30_023234) do
+ActiveRecord::Schema.define(version: 2018_12_03_190342) do
 
   create_table "tickets", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2018_11_30_023234) do
     t.string "status"
     t.string "department"
     t.string "priority"
+    t.text "updateSummary"
   end
 
 end

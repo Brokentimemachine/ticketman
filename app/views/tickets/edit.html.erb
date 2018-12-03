@@ -15,7 +15,11 @@ Last modified on: 12/03/2018
 
 <%= render 'form', ticket: @ticket %>
 
-
+<h3>Latest Update on ticket from Dave:</h3>
+<%= form_for @ticket do |f| %>
+  <%= f.text_field :updateSummary, class: 'form-control',  placeholder: "Enter an update on the issue.", :required=>true %><br>
+  <%= f.submit 'Save Update',class: 'btn btn-primary' %>
+<%end %> <br>
 <div class="btn btn-primary" >
   <%= link_to 'Back', tickets_path, :class => "btn btn-primary" %>
 </div>
