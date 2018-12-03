@@ -18,7 +18,7 @@ Last modified on: 12/03/2018
 
 <!--Adds scrolling functionality-->
 
-<table class="table" style="font-size: larger">
+<table class="table" id="tickets" style="font-size: larger">
   <thead class="thead-dark">
     <tr>
       <th scope="col">Name</th>
@@ -44,7 +44,7 @@ Last modified on: 12/03/2018
         %></td>
 <!--        <td><%#=  truncate ticket.updateSummary%></td>-->
         <td ><%= truncate ticket.status %></td>
-        <td ><%= truncate ticket.priority %> </td>
+        <td><%= truncate ticket.priority %> </td>
         <td>
           <div class="btn-group">
           <div class="btn btn-primary" style="margin: 1px">
@@ -75,12 +75,12 @@ Last modified on: 12/03/2018
 
 
 <br>
-<div class="digg_pagination">
-  <div class="page_info">
-    <%= page_entries_info @posts %>
-  </div>
-  <%= will_paginate @posts, :container => false %>
-</div>
+<!--<div class="digg_pagination">-->
+<!--  <div class="page_info">-->
+    <%#= page_entries_info @posts %>
+<!--  </div>-->
+  <%#= will_paginate @posts, :container => false %>
+<!--</div>-->
 
 <div class="btn btn-primary" >
   <%= link_to 'New Ticket',new_ticket_path(@ticket), :class => "btn btn-primary" %> |

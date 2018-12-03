@@ -10,7 +10,9 @@ edit, update, or delete these issues to let his employees know that their issues
 Filename: application.css.scss
 Description: This file imports Bootstrap and contains styling for our pages.
 Last modified on: 12/03/2018
+*/
 
+/*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
@@ -21,6 +23,7 @@ Last modified on: 12/03/2018
  * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
+ *= require dataTables/jquery.dataTables
  */
 
 @import "bootstrap";
