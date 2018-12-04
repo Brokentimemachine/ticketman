@@ -5,6 +5,7 @@ jQuery ->
 #  $('#tickets').dataTable()
 
   $('#tickets').dataTable( {
+    order: [[5, 'asc']],
     "columnDefs": [
       { "orderable": false, "targets": [0,1,2,3,4,6] }
     ]
